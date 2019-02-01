@@ -1,0 +1,89 @@
+body{
+    background-image: url(https://wallpaperaccess.com/full/450558.png);
+    background-size: unset;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+.navbar ul{
+    text-align: center;
+    margin-top: 10px;
+    list-style-type: none;
+}
+.home{
+    margin-left: 2%;
+}
+.navbar ul li{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 5.1%;
+    padding: 1%;
+    background-color: #eeb934;
+    border-radius: 15%;
+}
+.navbar ul li:hover{
+    color: red;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.feed{
+    overflow-y: scroll;
+    width: auto;
+    position: fixed;
+    height: 78%;
+    max-height: 100%;
+    border: ridge;
+    border-width: 5px;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5.5%;
+}
+.articles{
+    text-emphasis: justify;
+    border-bottom: solid;
+    position: relative;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin: 1%;
+}
+p {
+    text-indent: 2.5em;
+    margin: 2%;
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
+}
+img{
+    position: relative;
+    width: 40%;
+    height: 40%;
+    float: right;
+    margin-top: 6.1px;
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
+.grayh1{
+    color: rgb(247, 244, 244);
+    margin: 1%;
+    text-align: left;
+}
+h4{
+    font-style: italic;
+    margin: 0px;
+    margin-right: 20px;
+    margin-top: -28px;
+    text-align: right;
+}
+h1{
+    color: #eeb934;
+    margin: 1%;
+    text-align: left;
+}

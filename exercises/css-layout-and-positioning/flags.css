@@ -1,0 +1,297 @@
+body{
+    background-color: cyan;
+}
+div{
+    position: relative;
+    height: 300px;
+    width: 550px;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.france{
+    position: relative;
+}
+.france-3{
+    background-color: #012395;
+    position: absolute;
+    width: 183.3333px;
+}
+.france-2{
+    background-color: white;
+    width: 366.6666px;
+    position: absolute;
+}
+.france-1{
+    background-color: #ed2a39;
+    width: 550px;
+    position: absolute;
+}
+.germany{
+    position: relative;
+}
+.germany-3{
+    background-color: black;
+    height: 100px;
+    position: absolute;
+}
+.germany-2{
+    background-color: #ffce00;
+    height: 200px;
+    position: absolute;
+}
+.germany-1{
+    background-color: #dd0000;
+    height: 300px;
+    position: absolute;
+}
+.madagascar{
+    position: relative;
+}
+.madagascar-3{
+    background-color: white;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+}
+.madagascar-2{
+    background-color: #fc3d33;
+    height: 150px;
+    position: absolute;
+}
+.madagascar-1{
+    background-color: #007d3b;
+    height: 300px;
+    position: absolute;
+}
+.switzerland{
+    position: relative;
+}
+.switzerland-1, .switzerland-2, .switzerland-3, .switzerland-4, .switzerland-5, .switzerland-6, .switzerland-7, .switzerland-8, .switzerland-9, .switzerland-10, .switzerland-11, .switzerland-12, .switzerland-13{
+    position: absolute;
+}
+.switzerland-13{
+    background-color: cyan;
+    height: 300px;
+    width: 125px;
+}
+.switzerland-12{
+    background-color: #ff0000;
+    height: 300px;
+    width: 185px;
+}
+.switzerland-11{
+    background-color: #ff0000;
+    height: 120px;
+    width: 247.5px;
+}
+.switzerland-10{
+    background-color: white;
+    height: 180px;
+    width: 247.5px;
+}
+.switzerland-9{
+    background-color: #ff0000;
+    height: 300px;
+    width: 247.5px;
+}
+.switzerland-8{
+    background-color: #ff0000;
+    height: 60px;
+    width: 302.5px;
+}
+.switzerland-7{
+    background-color: white;
+    height: 240px;
+    width: 302.5px;
+}
+.switzerland-6{
+    background-color: #ff0000;
+    height: 120px;
+    width: 302.5px;
+}
+.switzerland-5{
+    background-color: #ff0000;
+    height: 120px;
+    width: 370px;
+}
+.switzerland-4{
+    background-color: white;
+    height: 180px;
+    width: 370px;
+}
+.switzerland-3{
+    background-color: #ff0000;
+    height: 300px;
+    width: 365px;
+}
+.switzerland-2{
+    background-color: #ff0000;
+    height: 300px;
+    width: 425px;
+}
+.switzerland-1{
+    background-color: cyan;
+    width: 550px;
+}
+.sweden{
+    position: relative;
+}
+.sweden-7{
+    background-color: #3075ac;
+    height: 120px;
+    width: 150px;
+    position: absolute;
+}
+.sweden-6{
+    background-color: #f8d34f;
+    height: 185px;
+    width: 150px;
+    position: absolute;
+}
+.sweden-5{
+    background-color: #3075ac;
+    height: 300px;
+    width: 145px;
+    position: absolute;
+}
+.sweden-4{
+    background-color: #f8d34f;
+    height: 300px;
+    width: 215px;
+    position: absolute;
+}
+.sweden-3{
+    background-color: #3075ac;
+    height: 120px;
+    width: 550px;
+    position: absolute;
+}
+.sweden-2{
+    background-color: #f8d34f;
+    height: 185px;
+    width: 550px;
+    position: absolute;
+}
+.sweden-1{
+    background-color: #3075ac;
+    width: 550px;
+    height: 300px;
+    position: absolute;
+}
+.gambia{
+    position: relative;
+}
+.gambia-5{
+    background-color: #c53436;
+    height: 100px;
+    width: 550px;
+    position: absolute;
+}
+.gambia-4{
+    background-color: #fff;
+    height: 120px;
+    width: 550px;
+    position: absolute;
+}
+.gambia-3{
+    background-color: #082692;
+    height: 180px;
+    width: 550px;
+    position: absolute;
+}
+.gambia-2{
+    background-color: #fff;
+    height: 200px;
+    width: 550px;
+    position: absolute;
+}
+.gambia-1{
+    background-color: #53803a;
+    height: 300px;
+    width: 550px;
+    position: absolute;
+}
+.tonga{
+    position: relative;
+}
+.tonga-1, .tonga-2, .tonga-3, .tonga-4, .tonga-5, .tonga-6, .tonga-7, .tonga-8, .tonga-9, .tonga-10, .tonga-11, .tonga-12, .tonga-13, .tonga-14{
+    position: absolute;
+}
+.tonga-14{
+    background-color: cyan;
+    height: 300px;
+    width: 125px;
+}
+.tonga-13{
+    background-color: cyan;
+    height: 300px;
+    width: 125px;
+}
+.tonga-12{
+    background-color: #ff0000;
+    height: 300px;
+    width: 185px;
+}
+.tonga-11{
+    background-color: #ff0000;
+    height: 120px;
+    width: 247.5px;
+}
+.tonga-10{
+    background-color: white;
+    height: 180px;
+    width: 247.5px;
+}
+.tonga-9{
+    background-color: #ff0000;
+    height: 300px;
+    width: 247.5px;
+}
+.tonga-8{
+    background-color: #ff0000;
+    height: 60px;
+    width: 302.5px;
+}
+.tonga-7{
+    background-color: white;
+    height: 240px;
+    width: 302.5px;
+}
+.tonga-6{
+    background-color: #ff0000;
+    height: 120px;
+    width: 302.5px;
+}
+.tonga-5{
+    background-color: #ff0000;
+    height: 120px;
+    width: 370px;
+}
+.tonga-4{
+    background-color: white;
+    height: 180px;
+    width: 370px;
+}
+.tonga-3{
+    background-color: #ff0000;
+    height: 300px;
+    width: 365px;
+}
+.tonga-2{
+    background-color: #ff0000;
+    height: 300px;
+    width: 425px;
+}
+.tonga-1{
+    background-color: cyan;
+    width: 550px;
+}
+
+
+
+
+
+/* 55, 67.5, 55, 67.5, 55 */

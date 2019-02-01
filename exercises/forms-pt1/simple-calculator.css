@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+form{
+    font-size: 30px;
+    border: solid;
+    border-color: cyan;
+    margin-top: 1.5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    background-color: black;
+    color: white;
+}
+input{
+    position: relative;
+    width: auto;
+    margin: 1%;
+    align-content: left;
+    font-size: 30px;
+}
+button{
+    margin-top: -20%;
+    background-color: cyan;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0px;
+    padding-bottom: opx;
+    font-size: 32px;
+
+
+}
+p{
+    font-size: 40px;
+    color: cyan;
+    display: inline-block;
+}
+#result{
+    color: cyan;
+    text-align: center;
+    margin-left: 6%;
+    font-size: 20em;
+}

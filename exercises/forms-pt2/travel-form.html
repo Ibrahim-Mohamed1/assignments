@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="travel-form.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Travel Today!</h1>
+    <form name="form" action="">
+        <input id="fName" class="firsttext text" type="text" placeholder="First Name" required>
+            <br>  
+            <br>      
+        <input id="lName" class="text" type="text" placeholder="Last Name" required>
+            <br>
+            <br>
+        <input id="age" class="text" type="number" placeholder="Age" required>
+            <p>Gender:</p>
+            <input class="gender" type="radio" name="gender" value="Male" required> Male
+            <input class="gender" type="radio" name="gender" value="Female" required> Female
+            <input class="gender" type="radio" name="gender" value="Gender Non-conforming" required> Gender Non-conforming
+            <input class="gender" type="radio" name="gender" value="Other" required> Other
+            <br>
+            <p>Destination: </p>
+    <select name="" id="destin">
+        <option value="Sweden">Sweden</option>
+        <option value="Italy">Italy</option>
+        <option value="Egypt">Egypt</option>
+    </select>
+        <p>Dietary needs:</p>            
+        <input name="diet" class="checkboxes" type="checkbox" value="[Vegetarian] "> Vegetarian
+        <input name="diet" class="checkboxes" type="checkbox" value="[Kosher] "> Kosher
+        <input name="diet" class="checkboxes" type="checkbox" value="[Lactose free]"> Lactose free
+        <input name="diet" class="checkboxes" type="checkbox" value="[None]"> None
+            <br>
+            <br>
+        <button type="submit">Submit</button>
+        <br>
+        <br>
+    </form>
+
+    <script src="travel-form.js"></script>
+</body>
+</html>

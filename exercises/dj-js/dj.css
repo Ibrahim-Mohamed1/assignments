@@ -1,0 +1,14 @@
+
+body{
+    background-color: black;
+}
+
+div{
+    margin-left: 30%;
+    margin-top: 7%;
+    height: 600px;
+    width: 600px;
+    background-color: cyan;
+    border-radius: 50%;
+    display: inline-block;
+}

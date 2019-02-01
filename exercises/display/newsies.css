@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+}
+h1 {
+    font-size: 800%;
+    margin: -10px;
+}
+hr {
+    padding: 8px;
+    background-color: black;
+}
+section {
+    display: inline-block;
+    width: 28%;
+    margin: 20px;
+    vertical-align: top;
+}
+h2 {
+    border: dashed;
+    background-color: red;
+}
+p {
+    border-top: dashed;
+    border-left: dashed;
+    border-right: dashed;
+    padding: 10px;
+}
+.full-border{
+    border-bottom: dotted;
+}
+img {
+    width: 93%;
+    margin-top: -22px;
+    padding: 10px;
+    border-bottom: dashed;
+    border-left: dashed;
+    border-right: dashed;
+}
