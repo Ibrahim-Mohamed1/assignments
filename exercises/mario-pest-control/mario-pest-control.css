@@ -1,0 +1,154 @@
+
+body{
+    background-image: url(https://i.pinimg.com/originals/36/ff/47/36ff471372fb645317b9e949ccdb4d7b.png);
+    background-size: unset;
+}
+img{
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin-top: 1%;
+    margin-left: 20%;
+    display: inline-block;
+}
+h1{
+    display: inline;
+}
+h2{
+    text-align: center;
+}
+.goomba{
+    color: white;
+    display: inline-block;
+    margin-left: 20.5%;
+}
+.bob-ombs{
+    display: inline-block;
+    position: absolute;    
+    color: white;
+    margin-left: 22%;
+}
+.cheep-cheeps{
+    color: white;
+    display: inline-block;
+    position: absolute;
+    margin-left: 49%;
+}
+input{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    position: absolute;
+}
+.goombaInput{
+    margin-left: 19%;
+}
+.bob-ombsInput{
+    margin-left: 47.6%;
+}
+.cheep-cheepsInput{
+    margin-left: 72.2%;
+}
+.brandName{
+    position: sticky;
+    margin-top: 1.8%;
+    text-align: center;
+    border: dotted;
+    border-color: #fdfa84;
+    margin-left: 42.5%;
+    margin-right: 44.5%;
+}
+p{
+    display: inline-block;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.goombaPrice{
+    margin-left: 20.5%;
+}
+.bob-ombsPrice{
+    margin-left: 21.5%;
+}
+.cheep-cheepsPrice{
+    margin-left: 21.5%;
+}
+button{
+    text-align: center;
+    font-family: cursive;
+    font-size: 110%;
+    margin-top: 2%;
+    margin-left: 47.3%;
+    height: 40px;
+    width: 4.5%;
+    background-color: #fdfa84;
+    border-radius: 50%;
+}
+#result{
+    color: #fdfa84;
+    font-family: cursive;
+    margin-left: 5%;
+    font-size: 400%;
+    margin-top: -14%;
+}
+.contacts{
+    display: inline-block;
+    margin-left: 8%;
+    margin-top: 5%;
+    font-size: 120%;
+}
+a{
+    text-decoration: underline;
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+    color: blue;
+}
+@media (max-width: 1440px){
+    .cheep-cheepsInput{
+        margin-left: 76.1%;
+    }
+    .brandName{
+        color: #fdfa84;
+        text-decoration: underline;
+        margin-top: 3.2%;
+        text-align: center;
+        border: ridge;
+        border-width: 7px;
+        border-color: #fdfa84;
+        margin-left: 56.5%;
+        margin-right: 25.5%;
+    }
+    button{
+        text-align: left;
+        margin-top: 2%;
+        margin-left: 50.8%;
+        height: 40px;
+        width: 4.5%;
+        background-color: #fdfa84;
+        border-radius: 50%;
+    }
+    .goombaPrice{
+        margin-left: 20%;
+    }
+    .bob-ombsPrice{
+        margin-left: 21%;
+    }
+    .cheep-cheepsPrice{
+        margin-left: 20.6%;
+    }
+}
+@media (min-width: 1700px){
+    .cheep-cheeps {
+        display: inline-block;
+        position: absolute;
+        margin-left: 46.8%;
+    }
+    .bob-ombs{
+        display: inline-block;
+        position: absolute;
+        margin-left: 21.5%;
+    }
+    .bob-ombsInput{
+        margin-left: 45.7%;
+    }
+}
