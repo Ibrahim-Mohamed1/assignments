@@ -27,6 +27,14 @@ function clearCheepcheep(){
 
 document.getElementById("cheep-cheepData").addEventListener("focus", clearCheepcheep)
 
+// you could make one "clear" function
+
+function clear(toClear){
+    document.getElementById(toClear).value = "";
+}
+
+clear("bob-ombData");
+
 // var bleep = new Audio
 // bleep.src = "bleep.mp3"
 // function cash (){
