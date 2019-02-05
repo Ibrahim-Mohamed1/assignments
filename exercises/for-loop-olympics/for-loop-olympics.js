@@ -155,12 +155,13 @@
 //     }
 
 
-var arr = [[0,1,2],[0,1,2],[0,1,2]]
-
-for(var i = 0; i < arr.length; i++){
-    for(var j = 0; j < arr[i].length;j++)
-        console.log(arr[i][j].push())
+var arr = [0,0,0,1,1,1,2,2,2]
+function stuff(){
+    for(var i = 0; i < arr.length; i++){
+        if(true) {
+            arr[i] = ("x")
+        }
     }
-    
-
-
+}
+stuff()
+console.log(arr)

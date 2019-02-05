@@ -14,7 +14,7 @@ function firstName(e){
         }
     }
 
-    alert(`First name: ${first[0].toUpperCase() + first.slice(1,)} \nLast name: ${last[0].toUpperCase() + last.slice(1)} \nAge: ${age} \nGender: ${gender} \nDestination: ${destin} \nDietary Restrictions: ${dietStr}`)
+    alert(`First name: ${first[0].toUpperCase() + first.slice(1)} \nLast name: ${last[0].toUpperCase() + last.slice(1)} \nAge: ${age} \nGender: ${gender} \nDestination: ${destin} \nDietary Restrictions: ${dietStr}`)
 }
 
 console.log(document.form.addEventListener("submit", firstName))
