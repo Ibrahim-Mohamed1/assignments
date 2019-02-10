@@ -1,3 +1,4 @@
+
 var ask = require("readline-sync")
 
 var firstNum = ask.question("\nEnter your first number please: ")
@@ -16,3 +17,14 @@ function stuff (operation){
 }
 
 console.log("\nYour result: " + stuff(operation) + "\n")
+
+
+// var matrix = [[1,2,3],[4,5,6],[7,8,9]]
+
+// for(i = 0; i < matrix.length; i++){
+//     for(j = 0; j < matrix[i].length; j++){
+//         matrix[i][j] = 0
+//     }
+// }
+
+// console.log(matrix)
