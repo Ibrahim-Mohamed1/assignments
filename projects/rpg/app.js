@@ -4,90 +4,109 @@ var ask = require("readline-sync")
 var isAlive = true
 var hasWon = false
 
-function Hero(name, hp){
-    this.name = name
-    // this.weapons = []
-    this.attack = Math.floor(Math.random()*30)+11
-    this.hp = hp
-    this.items = []
-    this.isAalive = true
+function Hero (name){
+    this.playername = name;
+    this.hp = 100;
+    this.items = [];
+    this.inventory = [];
+    this.attack = attack;
 }
 
-var player = new Hero("Mike")
 
-function enemy(name, attack, hp)
-{
+function Enemy (name, attack, hp){
     this.name = name
     this.attack = attack
     this.hp = hp
 }
 
-var randomLow = Math.floor(Math.random()*10)+10
-var randomMed = Math.floor(Math.random()*15)+20
-var randomHigh = Math.floor(Math.random()*20)+30
+var cable = new Enemy("Cable", randomLowAttack, 75)
+var venom = new Enemy("Venom", randomMedAttack, 100)
+var thanos = new Enemy("Thanos", randomHighAttack, 125)
 
+var enemies = [cable, venom, thanos]
 
-var vector = new enemy("Vector ", randomLow, 15)
-var samus = new enemy("Samus ", randomMed, 50)
-var fox = new enemy("Fox ", randomHigh, 90)
+var attack = [randomLowAttack, randomMedAttack, randomHighAttack]
 
-var enemies = [vector, samus, fox]
+var randomLowAttack = Math.floor(Math.floor()*5)+10
+var randomMedAttack = Math.floor(Math.floor()*10)+15
+var randomHighAttack = Math.floor(Math.floor()*15)+20
 
-//intro console.log
-console.log("Hey bruh, What's thou name?")
+var name = ask.question("\nWelcome to Wakanda noble warrior! What is thy name fam? ")
+var ready = ask.keyIn("\nHello " + name[0].toUpperCase() + name.slice(1) + "! Is thou ready to start thy quest? [y] Yes, [n] No: ",{limit: "yn"})
 
-while(isAalive && !hasWon){
-    var action = ask.keyIn("What would you like to do? [w} Milly Walk, [p] Print Inventory, [q] Quit Game. ", {limit: "wpq"})
-    if(action === 'w')
+var dude = new Hero(name)
+
+function answer(){
+    if(ready === "y"){
+        console.log("\nSplendid! Let's get started!\n\n" + name[0].toUpperCase() + name.slice(1) + ", thy quest is to rid this beautiful village of any evil that reside! You can do the following. ")
     }else{
-        var enemy = enemySelect()
-        while(enemy.hp > 0 && player.hp > 0){
-        }
-        if(enemy.hp <= 0){
-            console.log("you have won you hero")
-        }else if(player.hp <= 0){
-            console.log("you dead bruh")
-            isAlive = false;
-        }
+        var reason = ask.question("\nHaha how come fam? ")
+        console.log('\nWow, "' + reason + '" is not a good enough reason fam haha! So...\n\n' + name[0].toUpperCase() + name.slice(1) + ", thy quest is to rid this beautiful village of any evil that reside! You can do the following. ")
+    }
+}
+answer(ready)
+
+while(isAlive && !hasWon){
+    var action = ask.keyIn("\nWhat would you like to do? [w] Walk, [p] Print Inventory, [q] Quit Game: ", {limit: 'wpq'})
+    if(action === 'w'){
+        walk()
+    }
+    else if(action === "p"){
+        console.log("\nName: " + dude.playername[0].toUpperCase() + dude.playername.slice(1) + "\nHealth: " + dude.hp + "\nInventory: " + dude.inventory)
+    }else if(action === "q"){
+        console.log("\nThanks for playing " + name[0].toUpperCase() + name.slice(1) + "!\n")
+        break
     }
 }
 
 function walk(){
-    var random = Math.floor(Math.random()*3)
-    if (random === 1){
+    var chances = Math.floor(Math.random()*4)
+    if (chances === 1){
         encounter()
     }else {
-        console.log('You passed a tree. ')
+        joke()
+    }
+}
+function joke(){
+    var incident = Math.floor(Math.random()*4)
+    if(incident === 0){
+    console.log("\nLol, a llama spat on you fam.")
+    }else if(incident === 1){
+        console.log("\nBruh, you tripped on a pebble. How embarrassing "  + name[0].toUpperCase() + name.slice(1) + "!")
+    }else if(incident === 2){
+        console.log("\nWhoa, that stray arrow was so close to you skull! Impressive reflexes " + name[0].toUpperCase() + name.slice(1) + "!")
+    }else if(incident === 3){
+        console.log("\nJesus christ, " + name[0].toUpperCase() + name.slice(1) + "! You almost ran into that gentlemen!")
     }
 }
 
 function encounter(){
-    var action = ask.keyIn("Would you like to [r] Run or [f] Fight. ", {limit: "rf"})
-    if(action === "r"){
-        bolt()
+    console.log("\nOh no! An enemy has been spotted!")
+    var choice = ask.keyIn("\nWhat would you like to do? [r] Run or [f] Fight? ",{limit: "rf"})
+    if (choice === "r"){
+        run()
     }else{
+        enemySelect()
         fight()
     }
 }
 
 function fight(){
-    var random = Math.floor(Math.random()*5)
-    if(random === 1){
-        miss()
+    console.log("\nYour opponents name is " + enemySelect())
+
+}
+
+function run(){
+    var chance = Math.floor(Math.random()*2)
+    if (chance === 1){
+        console.log("\nThat was a close one " + name[0].toUpperCase() + name.slice(1) + "! You're quick on your feet!")
     }else{
-        var enemy = enemySelect()
-        player.hp -= enemy.attack
-        enemy.hp -= player.attack
-        console.log("hey " + player + " your hp is now " + player )
-        console.log("You hit " + enem)
+        console.log("\nOh no, it's too late! You weren't quick enough " + name[0].toUpperCase() + name.slice(1) + "!")
+        fight()
     }
 }
 
 function enemySelect(){
-    var random = Math.floor(Math.random()*enemies.length)
-    return enemies[random]
-}
-
-function miss (){
-    console.log("lolz you missed dudee")
+    var enemy = Math.floor(Math.random()*enemies.length)
+    return enemies[enemy].name
 }

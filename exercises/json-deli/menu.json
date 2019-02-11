@@ -1,0 +1,62 @@
+{
+    "appetizers": [
+        {
+            "name": "French fries",
+            "ingridients": "Potatoes, fry sauce",
+            "description": "Fresh in house sliced potatos with incredible in house fry sauce"
+        },
+        {
+            "name": "Chips and dip",
+            "ingridients": "Tortilla chips, guacamole dip",
+            "description": "Incredibly delicious in house chips and dip"
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "name": "Turkey Sandwich",
+            "ingridients": "Turkey slices, in house buns, lettuce, tomato, pickles, onions, mayo, mustard, ketchup",
+            "description": "Fresh in house sliced turkey along with in house buns, fresh pickles, tomatoe and condiments"
+        },
+        {
+            "name": "Ham Sandwich",
+            "ingridients": "Ham slices, in house buns, lettuce, tomato, pickles, onions, mayo, mustard, ketchup",
+            "description": "Fresh in house sliced ham along with in house buns, fresh pickles, tomatoe and condiments"
+        }
+    ],
+    "hot sandwiches": [
+        {
+            "name": "Roast Beef Sandwich",
+            "ingridients": "Roast beef slices, in house buns, lettuce, tomato, pickles, onions, mayo, mustard, ketchup",
+            "description": "Fresh in house cooked roasted beef along with in house buns, fresh pickles, tomatoe and condiments"
+        },
+        {
+            "name": "Meatball Marinara",
+            "ingridients": "Meatballs, in house buns, lettuce, tomato, pickles, onions, mayo, mustard, ketchup",
+            "description": "Fresh in house cooked meatballs along with in house buns, fresh pickles, tomatoe and condiments"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Ice Cream Cake",
+            "ingridients": "Ice cream, cake, oreo, frosting, whip cream",
+            "description": "Delicious ice cream cake"
+        },
+        {
+            "name": "Pumpkin pie",
+            "ingridients": "Pumpkin, dough, frosting, whip cream",
+            "description": "In house made pumpkin pie, fresh and ready"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Hi-C",
+            "ingridients": "Contains Pure Filtered Water, Sweeteners (High Fructose Corn Syrup, Sugar), Orange and Pineapple Juices from Concentrate, Less than 0.5% of: Vitamin C (Ascorbic Acid), Citric Acid (Provides Tartness), Natural and Artificial Flavors.",
+            "description": "Refreshing non carbonated drink"
+        },
+        {
+            "name": "Strawberry Fanta",
+            "ingridients": "CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, NATURAL FLAVORS, CITRIC ACID, SODIUM BENZOATE (TO PROTECT TASTE), RED 40.",
+            "description": "Refreshing familiar strawberry fanta"
+        }
+    ]
+}
