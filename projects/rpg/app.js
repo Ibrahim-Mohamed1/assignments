@@ -1,40 +1,48 @@
 
 var ask = require("readline-sync")
+var sleep = require('sleep')
 
 var isAlive = true
 var hasWon = false
+var gameEnd = false;
 
-function Hero (name){
+function Hero (name, attack){
     this.playername = name;
     this.hp = 100;
-    this.items = [];
     this.inventory = [];
     this.attack = attack;
 }
 
+function Amulets (name) {
+    this.name = name;
+ }
+ var earth = new Amulets('Earth Amulet')
+ var water = new Amulets('Water Amulet')
+ var fire = new Amulets('Fire Amulet')
+ 
+ var sacredamulets = [water.name, fire.name, earth.name]
 
-function Enemy (name, attack, hp){
+function Enemy (name, randomAttack, hp){
     this.name = name
-    this.attack = attack
+    this.attack = randomAttack
     this.hp = hp
 }
 
+var randomLowAttack = Math.floor(Math.random()*10)+5
+var randomMedAttack = Math.floor(Math.random()*15)+10
+var randomHighAttack = Math.floor(Math.random()*20)+15
+var randomLethalAttack = Math.floor(Math.random()*50)+80
+
 var cable = new Enemy("Cable", randomLowAttack, 75)
 var venom = new Enemy("Venom", randomMedAttack, 100)
-var thanos = new Enemy("Thanos", randomHighAttack, 125)
+var thanos = new Enemy("Thanos", randomHighAttack, 120)
 
 var enemies = [cable, venom, thanos]
-
-var attack = [randomLowAttack, randomMedAttack, randomHighAttack]
-
-var randomLowAttack = Math.floor(Math.floor()*5)+10
-var randomMedAttack = Math.floor(Math.floor()*10)+15
-var randomHighAttack = Math.floor(Math.floor()*15)+20
 
 var name = ask.question("\nWelcome to Wakanda noble warrior! What is thy name fam? ")
 var ready = ask.keyIn("\nHello " + name[0].toUpperCase() + name.slice(1) + "! Is thou ready to start thy quest? [y] Yes, [n] No: ",{limit: "yn"})
 
-var dude = new Hero(name)
+var dude = new Hero(name, randomLethalAttack)
 
 function answer(){
     if(ready === "y"){
@@ -46,13 +54,13 @@ function answer(){
 }
 answer(ready)
 
-while(isAlive && !hasWon){
+while(isAlive && gameEnd === false){
     var action = ask.keyIn("\nWhat would you like to do? [w] Walk, [p] Print Inventory, [q] Quit Game: ", {limit: 'wpq'})
     if(action === 'w'){
         walk()
     }
     else if(action === "p"){
-        console.log("\nName: " + dude.playername[0].toUpperCase() + dude.playername.slice(1) + "\nHealth: " + dude.hp + "\nInventory: " + dude.inventory)
+        inventory()
     }else if(action === "q"){
         console.log("\nThanks for playing " + name[0].toUpperCase() + name.slice(1) + "!\n")
         break
@@ -86,14 +94,60 @@ function encounter(){
     if (choice === "r"){
         run()
     }else{
-        enemySelect()
-        fight()
+        var enemy = enemySelect()
+        fight(enemy)
     }
 }
 
-function fight(){
-    console.log("\nYour opponents name is " + enemySelect())
-
+function fight(enemy){
+    console.log("\nYour opponents name is: " + enemy.name.toUpperCase())
+    sleep.sleep(1)
+    console.log("\nYour HP: " + dude.hp + "\tEnemy HP: " + enemy.hp)
+    while(enemy.hp > 0 && dude.hp > 0){
+        var random = Math.floor(Math.random()*20)
+        if(random === 1){
+            miss(enemy)
+        }else {
+            dude.hp -= enemy.attack
+            sleep.sleep(2)
+            console.log("\nYou were hit by " + enemy.name + " for " + enemy.attack + " HP")
+            sleep.sleep(1)
+            console.log("\n" + `Your HP is now ${dude.hp}`)
+            enemy.hp -= dude.attack
+            sleep.sleep(2)
+            if (dude.hp <= 0){
+                console.log("\nYou have died!\n")
+                gameEnd = true
+                break
+            } 
+            console.log("\nYou hit " + enemy.name + " for " + dude.attack + " HP")
+            sleep.sleep(2)
+            console.log("\n" + `Your attack against ${enemy.name} has plummeted their HP to ${enemy.hp}`)
+        }
+        if (enemy.hp <= 0){
+            sleep.sleep(2)
+            console.log("\nYou won!")
+            var index = enemies.indexOf(enemy)
+            enemies.splice(index,1)
+            var amulet = amuletSelect()
+            sleep.sleep(2)
+            console.log("\nYou have recieved an award: " + amulet)
+            sleep.sleep(2)
+            dude.inventory.push(amulet)
+            var amindex = sacredamulets.indexOf(amulet)
+            sacredamulets.splice(amindex,1)
+            if(enemies.length <= 0 && dude.hp >0){
+                gameEnd = true;
+                sleep.sleep(1)
+                console.log("\nInventory: " + dude.inventory)
+                sleep.sleep(2)
+                console.log(`\nCONGRATULATIONS ${dude.playername[0].toUpperCase() + dude.playername.slice(1)}!! You have successfully protected this village from all evil! \n\nTHANK YOU!!\n`)
+            }
+        }
+        if (dude.hp <= 0){
+            console.log("\nYou have died!")
+    } 
+    }
 }
 
 function run(){
@@ -102,11 +156,28 @@ function run(){
         console.log("\nThat was a close one " + name[0].toUpperCase() + name.slice(1) + "! You're quick on your feet!")
     }else{
         console.log("\nOh no, it's too late! You weren't quick enough " + name[0].toUpperCase() + name.slice(1) + "!")
-        fight()
+        fight(enemySelect())
     }
 }
 
 function enemySelect(){
     var enemy = Math.floor(Math.random()*enemies.length)
-    return enemies[enemy].name
+    return enemies[enemy]
 }
+
+function miss (){
+    console.log('\nYou missed your attack')
+}
+
+function sleep(ms){
+    return new Promise(resolve=>{
+        setTimeout(resolve,ms)
+    })
+}
+function amuletSelect() {
+    var random = Math.floor(Math.random() * sacredamulets.length)
+        return sacredamulets[random]
+ }
+ function inventory(){
+    console.log("\nName: " + dude.playername[0].toUpperCase() + dude.playername.slice(1) + "\nHealth: " + dude.hp + "\nInventory: " + dude.inventory)
+ }
