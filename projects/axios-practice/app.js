@@ -1,13 +1,37 @@
-var todo = axios.get('https://api.vschool.io/ibrahim/todo/').then(function (response) {
-   console.log(response.data);
-   for (i = 0; i < response.data.length; i++) {
-       done = response.data[i];
-       if (done.completed === true) {
-           document.getElementById("div1").innerHTML += `<s><div> complete = ${done.completed} | id = ${done._id} | title = ${done.title} | description = ${done.description} | price = ${done.price}</div></s>`;
-       } else
-           document.getElementById("div1").innerHTML += `<div> complete = ${done.completed} | id = ${done._id} | title = ${done.title} | description = ${done.description} | price = ${done.price}</div>`;
-   }
-}).catch(function (error) {
-   console.log(error);
+axios.get("https://api.vschool.io/ibrahim/todo").then(function(response) {
+    getTodos(response.data)
 })
-console.log(todo);
+
+function getTodos(todos){
+    todos.forEach(function(todo){
+        var parent = document.createElement("data1");
+        parent.className = "todo";
+        var text = document.createTextNode(todo.title);
+
+        var image = document.createElement("img");
+        image.className = "image"
+        image.src = todo.imgUrl
+        parent.appendChild(image);
+        
+        var input = document.createElement("input");
+        input.className = "input";
+        input.type = "checkbox";
+        
+        parent.appendChild(input);
+
+        parent.appendChild(text);
+        
+        input.addEventListener("click", function (e){
+
+            e.target.parentNode.classList.toggle("strikened");
+            todos.forEach(function (todo){
+                todo.completed = todo.completed ? false : true;
+            })
+        })
+        if(todo.completed){
+            parent.classList.toggle("strikened")
+            input.checked = true;
+        }
+        document.getElementById("todo-list").appendChild(parent);
+    })
+ }

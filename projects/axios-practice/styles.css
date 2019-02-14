@@ -1,0 +1,11 @@
+.strikened{
+    text-decoration: line-through;
+}
+.image{
+    height: 10%;
+    width: 10%;
+    display: block;
+}
+body{
+    background-color: orange;
+}
