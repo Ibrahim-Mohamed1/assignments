@@ -7,6 +7,7 @@ function getTodos(todos){
         var parent = document.createElement("data1");
         parent.className = "todo";
         var text = document.createTextNode(todo.title);
+        parent.id = todo._id
 
         var image = document.createElement("img");
         image.className = "image"
@@ -16,6 +17,7 @@ function getTodos(todos){
         var input = document.createElement("input");
         input.className = "input";
         input.type = "checkbox";
+        input.addEventListener("click", update)
         
         parent.appendChild(input);
 
@@ -35,3 +37,30 @@ function getTodos(todos){
         document.getElementById("todo-list").appendChild(parent);
     })
  }
+
+ function update(e){
+     if(e.target.checked){
+        axios.put("https://api.vschool.io/ibrahim/todo/" + e.target.parentNode.id, {completed: true}).then(function(response){
+        })
+     }else{
+        axios.put("https://api.vschool.io/ibrahim/todo/" + e.target.parentNode.id, {completed: false}).then(function(response){
+     })
+ }}
+
+ document.form.addEventListener("submit", function(e){
+    e.preventDefault()
+    newTodo = {
+        title: document.form.title.value,
+        description: document.form.description.value,
+        price: document.form.price.value,
+        imgUrl: document.form.image.value,
+        completed: document.form.complete.checked
+        }
+        console.log(newTodo);
+
+    axios.post("https://api.vschool.io/ibrahim/todo", newTodo).then(function(response){
+        console.log(response.data);
+        getTodos(response.data)
+    }).catch(function(error){console.log(error);
+    })
+})

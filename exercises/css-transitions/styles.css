@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(231, 197, 151);
+}
+div{
+    display: inline-block;
+    height: 22em;
+    width: 22em;
+    margin-left: 6.5%;
+    margin-top: 1.8%;
+    background-color: black;
+}
+.box1{
+    background-color: orange;
+    box-shadow: 20px 20px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.box1:hover{
+    -webkit-transform: rotateZ(900deg);
+    -ms-transform: rotateZ(900deg);
+    transform: rotateZ(900deg);
+    border-radius: 50%;
+    box-shadow: none;
+    background-color: cyan;    
+}
+.box2{
+    background-color: red;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.box2:hover{
+    -webkit-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    transform: scale(0.2);
+    border-radius: 30%;
+    background-color: cyan;    
+}
+.box3{
+    background-color: greenyellow;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.box3:hover{
+    -webkit-transform: rotateX(-900deg);
+    -ms-transform: rotateX(-900deg);
+    transform: rotateX(-900deg);
+    box-shadow: none;
+    border-radius: 40%;
+    height: 5em;
+    width: 5em;
+    background-color: cyan;    
+}
+.box4{
+    background-color: blue;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.box4:hover{
+    transition: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    box-shadow: none;
+    border-radius: 0;
+    background-color: cyan;    
+}
+.box5{
+    background-color: purple;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.box5:hover{
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    box-shadow: none;
+    border-radius: 0;
+    background-color: cyan;    
+}
+.box6{
+    background-color: yellow;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    -webkit-transition: all 1s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    -moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    -o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    border: 1px #000 dotted;
+}
+.box6:hover{
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: cubic-bezier(1, -0.53, 0.405, 1.425);
+    border-radius: 0;
+    background-color: cyan;    
+}

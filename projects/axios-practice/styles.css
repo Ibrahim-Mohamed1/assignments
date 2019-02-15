@@ -4,7 +4,9 @@
 .image{
     height: 10%;
     width: 10%;
-    display: block;
+    display: inline-block; 
+    margin-left: 2%;
+    margin-top: 2%;
 }
 body{
     background-color: orange;

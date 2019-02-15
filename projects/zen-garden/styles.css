@@ -1,0 +1,53 @@
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0%;
+}
+.main > div{
+    background-color: orange;
+    border: dotted;
+}
+.main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "t t o"
+        "i i a"
+        "p p q"
+        "r r b"
+        "f f f"
+        "d d d";
+}
+.title {    
+    grid-area: t;
+}
+.dOptions {
+    grid-area: o;
+}
+.intro {
+    grid-area: i;
+}
+.dAuthors {
+    grid-area: a;
+}
+.participation {
+    grid-area: p;
+}
+.faq {
+    grid-area: q;
+}
+.requirements {
+    grid-area: r;
+}
+.blank {
+    grid-area: b;
+}
+.footer {
+    grid-area: f;
+}
+.dots {
+    grid-area: d;
+}
