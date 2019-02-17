@@ -1,11 +1,24 @@
+@font-face{
+    font-family: "verde";
+    src: url(verdemoderna.woff)
+}
+@font-face{
+    font-family: "julius";
+    src: url(1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2)
+}
+@font-face{
+    font-family: "libreSlanted";
+    src: url(kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2)
+}
+@font-face{
+    font-family: "libreRegular";
+    src: url(kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2)
+}
+
 html, body{
     box-sizing: border-box;
     height: 100%;
-    margin: 0%;
-}
-.main > div{
-    background-color: orange;
-    border: dotted;
+    margin: 0%;    
 }
 .main{
     height: 100%;
@@ -21,33 +34,178 @@ html, body{
         "f f f"
         "d d d";
 }
-.title {    
+.title {
+    padding-bottom: 10%;
+    background-image: url(http://www.csszengarden.com/214/contours-opaque.png),url(http://www.csszengarden.com/214/gridlines-opaque.png),url(http://www.csszengarden.com/214/huntington.jpg);
+    background-size: auto;
     grid-area: t;
 }
+.header{
+    color: white;
+    font-size: 320%;
+    font-weight: 400;
+    margin-top: 2em;
+    margin-right: 0.338em;
+}
+.slogan{
+    font-size: 1.6em;
+    margin-top: -.95em;
+    margin-left: 11.05em;
+    text-indent: .25%;
+    margin-bottom: 0%;
+}
+.logo{
+    height: 127px;
+    width: 126.5px;
+    float: left;
+    margin-top: 5.45em;
+    margin-left: 14.8%;
+    margin-right: 2.5em;
+}
 .dOptions {
+    padding: 8.8%;
+    background-image: url(http://www.csszengarden.com/214/contours-opaque.png),url(http://www.csszengarden.com/214/gridlines-opaque.png),url(http://www.csszengarden.com/214/huntington.jpg);
     grid-area: o;
+    background-size: auto;
 }
 .intro {
     grid-area: i;
+    margin-left: 15%;
+    margin-top: 5%;
+    line-height: 33px;
+    margin-right: 7.1%;
+    margin-bottom: 5.4%;
+    background-color: white;
+}
+.download{
+    font-family: "verde";
+    color: #a5ba91;
+    background-color: #d6e2cb;
+    border-radius: 2px;
+    padding: 2px;
+}
+.fileLinks{
+    font-family: "julius";
+    color: #a5ba91;
 }
 .dAuthors {
+    background-color: #e4ece8;
     grid-area: a;
+    padding-top: 5.5%;
 }
 .participation {
+    background-image: url(http://www.csszengarden.com/214/bamboo.png),url(http://www.csszengarden.com/214/contours-opaque.png),url(http://www.csszengarden.com/214/gridlines-opaque.png);
+    background-color: rgba(138,188,159,0.5);
+    background-size: contain;
     grid-area: p;
+    padding-top: 5.5%;
+    padding-bottom: 5.5%;
+}
+.pMargins{
+    margin-left: 15%;
+    line-height: 33px;
+    margin-right: 7.1%;
 }
 .faq {
-    grid-area: q;
+    background-image: url(http://www.csszengarden.com/214/bamboo.png),url(http://www.csszengarden.com/214/contours-opaque.png),url(http://www.csszengarden.com/214/gridlines-opaque.png);
+    background-color: rgba(104, 165, 130, 0.5);
+    background-size: contain;
+    grid-area: q;    
+    padding-top: 30%;
+}
+.faqMargings{
+    margin-left: 15%;
+    line-height: 33px;
+    margin-right: 7.1%;
+    color: #677b6d;
+}
+hr{
+    margin-left: 15%;
+    margin-right: 30%;
+    border: 0;
+    border-top: 1px solid #84848457;
 }
 .requirements {
     grid-area: r;
+    padding-top: 5.5%;
+    padding-bottom: 5.5%;
+    background-color: #fff;
 }
 .blank {
+    background-color: #e2eee8;
     grid-area: b;
 }
 .footer {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 4%;
+    background-image: url(http://www.csszengarden.com/214/koi.jpg);
     grid-area: f;
 }
+.footerMargins{
+    font-weight: 100;
+    font-size: 1.7em;
+    padding-top: 1%;
+    padding-bottom: 1.8%;
+    margin-left: 7%;
+    margin-right: 5%;
+    line-height: 62px;
+}
 .dots {
+    font-family: "verde";
+    background-color: #004448;
+    color: white;
+    padding-bottom: 3.6%;
+    padding-top: 3.5%;
+    font-size: 4.4em;
+    text-align: center;
     grid-area: d;
+}
+.icons{
+    margin-left: 6.2%;
+}
+.icons:hover{
+    cursor: pointer;
+    color: #84a2a3;
+}
+.icon1:hover{
+    cursor: pointer;
+    color: #84a2a3;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+.juliusFont{
+    font-family: "julius";
+    font-weight: 100;
+}
+.libreSlanted{
+    color: #a2b4b3;
+    font-family: "libreSlanted"
+}
+.libreRegular{
+    color: #275150;
+    font-family: "libreRegular"
+}
+.specialLibreRegular{
+    color: #c3d0d2;
+    font-family: "libreRegular";
+}
+.authorsMargin{
+    color: #616857;
+    margin-right: 30.06%;
+    margin-left: 15.5%;
+    margin-top: -3%;
+}
+.authorsHover:hover{
+    cursor: pointer;
+    color: #0d8ba1;
+}
+.underline{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    font-size: .9em;
+}
+h1{
+    font-size: 1.8em;
 }
