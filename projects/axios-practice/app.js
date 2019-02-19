@@ -19,6 +19,8 @@ function getTodos(todos){
         input.type = "checkbox";
         input.addEventListener("click", update)
         
+        var delete = document.createElement("button")
+
         parent.appendChild(input);
 
         parent.appendChild(text);
