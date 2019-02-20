@@ -426,7 +426,12 @@ h1{
     .footerMargins{
         font-size: 1.8em;
     }
-
+    .participation{
+        font-size: 0.84em;
+    }
+    .requirements{
+        font-size: 0.84em;
+    }
 }
 @media (min-width: 1455px){
     .arrow {
