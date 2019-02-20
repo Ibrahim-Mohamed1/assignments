@@ -65,31 +65,31 @@
 
 // NEW
 
-var ofAge = [
-    {
-        name: "Angelina Jolie",
-        age: 80
-    },
-    {
-        name: "Eric Jones",
-        age: 2
-    },
-    {
-        name: "Paris Hilton",
-        age: 5
-    },
-    {
-        name: "Kayne West",
-        age: 16
-    },
-    {
-        name: "Bob Ziroll",
-        age: 100
-    }
-]
+// var ofAge = [
+//     {
+//         name: "Angelina Jolie",
+//         age: 80
+//     },
+//     {
+//         name: "Eric Jones",
+//         age: 2
+//     },
+//     {
+//         name: "Paris Hilton",
+//         age: 5
+//     },
+//     {
+//         name: "Kayne West",
+//         age: 16
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         age: 100
+//     }
+// ]
 
-var allowed = ofAge.filter(function(oldEnough){
-    return oldEnough.age >= 18
-})
+// var allowed = ofAge.filter(function(oldEnough){
+//     return oldEnough.age >= 18
+// })
 
-console.log(allowed)
+// console.log(allowed)

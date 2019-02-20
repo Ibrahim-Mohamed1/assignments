@@ -18,7 +18,6 @@ function getTodos(todos){
         var input = document.createElement("input");
         input.className = "iCheck";
         input.type = "checkbox";
-        input.textContent = "Complete"
         input.addEventListener("click", update)
 
         var inputText = document.createElement('span');
@@ -75,37 +74,37 @@ function getTodos(todos){
         var random = Math.floor(Math.random()*11)
         console.log(random)
         if(random === 0){
-        img = "https://www.rd.com/wp-content/uploads/2018/07/01-Corny-Jokes-Everyone-Will-Laugh-at-nicole-fornabaio-rd.com_-760x506.jpg"
+        img = "http://thesource.com/wp-content/uploads/2017/11/zendaya.jpg"
         }
         else if(random === 1){
-        img = "https://www.rd.com/wp-content/uploads/2018/09/52-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_.jpg"
+        img = "https://i.ytimg.com/vi/QtgdlDeQdqY/maxresdefault.jpg"
         }
         else if(random === 2){
-        img = "https://www.readersdigest.ca/wp-content/uploads/sites/14/2018/10/05-Corny-Jokes-Everyone-Will-Laugh-at-nicole-fornabaio-rd.com_-760x506.jpg"
+        img = "https://cdn1.thr.com/sites/default/files/imagecache/landscape_928x523/2015/02/zendaya_oscars.jpg"
         }
         else if(random === 3){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/01-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://assets.vogue.com/photos/593ef9f29d94cb14039a9e42/16:9/pass/09-zendaya-coleman-vogue-july-2017.jpg"
         }
         else if(random === 4){
-        img = "https://www.rd.com/wp-content/uploads/2018/09/73-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_.jpg"
+        img = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/zendaya-met-gala-2018-index-955769210-1525740727.jpg"
         }
         else if(random === 5){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/02-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://www.billboard.com/files/media/zendaya-2018-june-16-u-billboard-1548.jpg"
         }
         else if(random === 6){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/04-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://cdn1.thr.com/sites/default/files/imagecache/landscape_928x523/2015/04/zendaya.jpg"
         }
         else if(random === 7){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/06-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/zendaya-1503623864.jpg"
         }
         else if(random === 8){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/08-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://assets.teenvogue.com/photos/5a1eca8bd72d6a04875f00e6/16:9/w_1280,c_limit/zendaya-gender-neutral-clothing-line.jpg"
         }
         else if(random === 9){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/11-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://mondrian.mashable.com/uploads%252Fcard%252Fimage%252F514731%252Fc4dfcd99-854b-4415-bfdb-36c55f0b5556.jpg%252F950x534__filters%253Aquality%252890%2529.jpg?signature=KkFk5ezUyUVTKPP59GSd6evM8UM=&source=https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com"
         }
         else if(random === 10){
-        img = "https://www.rd.com/wp-content/uploads/2018/06/12-Short-Jokes-Anyone-Can-Remember-nicole-fornabaio-rd.com_-1024x683.jpg"
+        img = "https://cdn1.thr.com/sites/default/files/imagecache/landscape_928x523/2017/08/zendaya.jpg"
         }
         else{
             img = document.form.image.value

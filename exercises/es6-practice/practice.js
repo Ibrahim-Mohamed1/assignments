@@ -62,9 +62,9 @@ console.log(mapVegetables("carrot"))
 
 // REWRITE TO ES6
 
-// var printString = (fName, lName, age) => `Hello ${fName} ${lName}! How does it feel to be ${age}!`
+var printString = (fName, lName, age) => `Hello ${fName} ${lName}! How does it feel to be ${age}!`
 
-// console.log(printString("Ibrahim", "Mohamed", 22))
+console.log(printString("Ibrahim", "Mohamed", 22))
 
 
 // REWRITE TO ES6

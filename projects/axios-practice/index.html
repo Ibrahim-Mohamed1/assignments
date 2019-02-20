@@ -10,11 +10,11 @@
 <body>
     <h1>To Do List<img id="chek" src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-md.png"></h1>
     <form name="form" action="">
-        <input id="title" type="text" placeholder="Title (Required)" required>
-        <input id="description" type="text" placeholder="Description (Optional)" >
-        <input id="price" type="number" placeholder="Price (Optional)" >
-        <input id="image" type="text" placeholder="Image URL (Preferred)">
-        Completed<input type="checkbox" name="" id="complete">
+        <input id="title" type="text" placeholder="Title (Required)" required autocomplete="off">
+        <input id="description" type="text" placeholder="Description (Optional)" autocomplete="off">
+        <input id="price" type="number" placeholder="Price (Optional)" step=".01" autocomplete="off">
+        <input id="image" type="text" placeholder="Image URL (Preferred)" autocomplete="off">
+        <input type="checkbox" name="" id="complete"><span class="completed">Completed</span>
         <button id="submit">Submit</button>
     </form>
     <div id="todo-list"></div>
