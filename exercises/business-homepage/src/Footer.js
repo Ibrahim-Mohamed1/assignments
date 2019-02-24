@@ -1,44 +1,15 @@
 import React from "react"
 
-const Footer = () => {
+const Footer = (props) => {
+
     return (
         <div>
-            <div>
-                <h4>Products</h4>  
-                <ul>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <ul>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                </ul>
-            </div>
-            <div>   
-                <h4>Social Media</h4>
-                <ul>  
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                </ul>
-            </div>
-            <div>
-                <h4>(Company Name)</h4>  
-                <ul>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                    <li>blah</li>
-                </ul>
-            </div>
+            <h4>{props.stuff.section}</h4>  
+            <ul>
+                <li>{props.stuff.item1}</li>
+                <li>{props.stuff.item2}</li>
+                <li>{props.stuff.item3}</li>
+            </ul>
         </div>
     )
 }

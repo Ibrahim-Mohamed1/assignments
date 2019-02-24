@@ -10,7 +10,26 @@ const App = () =>{
             <Nav/>
             <Info/>
             <Products/>
-            <Footer/>
+            <Footer 
+            stuff={{
+                section:"Products", item1:"blah", item2:"blah", item3:"blah"
+            }}
+            />
+            <Footer 
+            stuff={{
+                section:"Support", item1:"blah", item2:"blah", item3:"blah"
+            }}
+            />
+            <Footer 
+            stuff={{
+                section:"Social Media", item1:"blah", item2:"blah", item3:"blah"
+            }}
+            />
+            <Footer 
+            stuff={{
+                section:"Comapany", item1:"blah", item2:"blah", item3:"blah"
+            }}
+            />
         </div>
     )
 }

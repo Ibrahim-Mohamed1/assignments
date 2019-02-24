@@ -1,0 +1,8 @@
+body{
+    background-color: orange;
+    color: aqua;
+    font-size: 15em;
+    text-align: center;
+    margin-top: 1em;
+    -webkit-user-select: none;
+}

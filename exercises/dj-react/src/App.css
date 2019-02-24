@@ -1,0 +1,20 @@
+.boxStyle{
+    height: 300px;
+    text-align: center;
+    border: solid cyan;
+}
+.mainDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.parentDiv{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.buttonStyle{
+    width: 100px;
+    height:40px;
+    margin-left:6.8px;
+    border-radius:10px;
+    margin-Top:30px;
+}
