@@ -13,7 +13,7 @@ const heros = [
   },{
     name: "Naruto",
     image: "https://www.whats-on-netflix.com/wp-content/uploads/2018/09/naruto-on-netflix.jpg",
-    catchPhrase: "It's "
+    catchPhrase: "Believe it!"
   },{
     name: "Robin",
     image: "https://img1.looper.com/img/gallery/why-dc-wont-make-a-robin-movie/intro.jpg",

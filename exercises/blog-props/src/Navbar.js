@@ -1,5 +1,4 @@
 import React from "react"
-import App from "./App.css"
 
 const Navbar = () => {
     const title = {

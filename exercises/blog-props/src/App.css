@@ -1,3 +1,21 @@
-.grayHover :hover{
+.grayHover:hover{
   color: lightgray;
+  transition: .1s
+}
+.tealHover:hover{
+  color: rgb(0, 133, 161);
+  transition: .2s
+}
+.buttonHover{
+  background-color:#0085a1;
+}
+.buttonHover:hover{
+  background-color: #00657b;
+  transition: .2s
+}
+.underlineHover:hover{
+  text-decoration: underline;
+  color: rgb(0, 133, 161);
+  transition: .2s
+
 }

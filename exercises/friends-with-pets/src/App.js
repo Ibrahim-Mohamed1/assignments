@@ -1,7 +1,7 @@
 import React from "react"
-import FriendList from "./FriendList"
+import Friends from "./Friends"
 
-let friends = [
+const friends = [
   {
     name: "Ben",
     age: 29,
@@ -62,23 +62,15 @@ const App = (props) => {
   
   const mappedFriends = friends.map((friend) =>{
     return <div>
-      <FriendList 
-        name={friend.name}
+      <Friends 
+        name={friend.name} pets={friend.pets}
       />
     </div>
   })
-  const mappedPets = friends.map((pet) =>{
-    return <pet 
-      petName={pet.pets.name}
-      petName={pet.pets.breed}
-    />
-  })
-
 
   return (
-    <div>
+    <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(100px, 1fr))", marginTop:200}}>
       {mappedFriends}
-      {mappedPets}
     </div>
   )
 }
