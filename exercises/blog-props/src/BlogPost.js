@@ -2,8 +2,8 @@ import React from "react"
 
 const BlogPost = () => {
     const div={
-        marginLeft: "22.3em",
-        marginRight: "22.3em"
+        marginLeft: "24.8%",
+        marginRight: "24.8%"
     }
     const title ={
         fontSize:43,
@@ -34,7 +34,7 @@ const BlogPost = () => {
         outline: "none",
         cursor:"pointer"
       }
-      
+
     return (
         <div>
             <div style={div}>

@@ -5,8 +5,8 @@ const Navbar = () => {
         display:"inline-block",
         overflow:"hidden",
         margin: 0,
-        marginTop:20,
-        marginLeft:180,
+        marginTop:"1.4%",
+        marginLeft:"12.5%",
         cursor:"pointer"
     }
     const nav = {
