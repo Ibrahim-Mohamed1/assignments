@@ -37,7 +37,7 @@ class App extends Component {
         <br></br>
         <input placeholder="Last Name" value={this.state.lastName} name={"lastName"} type="text" onChange={this.changeHandle} required></input>
         <h1>{this.state.firstName} {this.state.lastName}</h1>
-        <button >Click</button>
+        <button >Submit</button>
         <ul>
           {mappedName}
         </ul>
