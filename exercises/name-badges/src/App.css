@@ -1,0 +1,31 @@
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+    background-color: lime;
+}
+input{
+    text-transform: capitalize;
+}
+.about{
+    margin-right: -105%;
+    padding-bottom: 70px;
+}
+.submit{
+    margin-left: 80%;
+    margin-right: -20%;
+    zoom: 1.5;
+    border-radius: 5px;
+    outline: none;
+}
+.parentDiv{
+    margin-right: 15%;
+    zoom: 1.4;
+    border: solid;
+    padding: 2% 4%;
+    margin-left: 15%;
+    margin-top: 1%;
+    border-radius: 15px;
+    text-transform: capitalize;
+    margin-bottom: 2%;
+}
