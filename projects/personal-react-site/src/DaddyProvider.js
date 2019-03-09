@@ -8,7 +8,7 @@ class DaddyProvider extends Component {
         this.state = {
             cuisines: [],
             restaurants: [],
-            // luckyRestaurant: {}
+            luckyRestaurant: ''
         }
     }
 
@@ -19,29 +19,30 @@ class DaddyProvider extends Component {
             })
         })
     }
-
-    saveLuckyRestaurant = (cuisineKey) => {
-        this.setState(() =>({
-            getRestaurants(cuisineKey)
-        }))
-    }
-
+    
     getRestaurants = (cuisineKey) => {
         axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${cuisineKey}`, { headers: { "user-key": 'b9231aba813528cc150e005038ae0983' } }).then(res => {
             this.setState({
                 restaurants: res.data.restaurants
             })
-            
+        })
+    }
+
+    luckyRestaurants = (key) => {
+        axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${key}`, { headers: { "user-key": 'b9231aba813528cc150e005038ae0983' } }).then(res => {
+            console.log('here i am')
+            this.setState({
+                luckyRestaurant: res.data.restaurants[Math.floor(Math.random()*res.data.restaurants.length)].restaurant
+            })
         })
     }
     
-    
     render() {
-        // console.log(getRestaurants)
         return (
             <Provider value={{
                 getCuisines: this.getCuisines,
                 getRestaurants: this.getRestaurants,
+                luckyRestaurants: this.luckyRestaurants,
                 ...this.state
             }}
             >

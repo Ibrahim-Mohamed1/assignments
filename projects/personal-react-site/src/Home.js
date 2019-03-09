@@ -1,43 +1,43 @@
 import React from "react"
-import {withData} from "./DaddyProvider"
+import { withData } from "./DaddyProvider"
 
 class Home extends React.Component {
-    constructor(){
+    constructor() {
         super()
-        this.state={
+        this.state = {
             value: 0
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.getCuisines()
     }
 
-    handleChange = (e) =>{
+    handleChange = (e) => {
         e.preventDefault()
-        this.setState({value: e.target.value})
+        this.setState({ value: e.target.value })
     }
-    
-    handleSubmit = () =>{
+
+    handleSubmit = () => {
         this.props.getRestaurants(this.state.value)
-        
+
     }
 
     render() {
         const price = " $"
-        const mappedRestaurants = this.props.restaurants.map(place => 
-            <div style={{ border: "solid", backgroundColor: "tan" }} key={place.restaurant.id}>
-                <h1 style={{ marginLeft: 10, textAlign:"center" }}>{place.restaurant.name}</h1>
+        const mappedRestaurants = this.props.restaurants.map(place =>
+            <div class="res" style={{ border: "solid red", borderRadius:30 }} key={place.restaurant.id}>
+                <h1 style={{ marginLeft: 10, textAlign: "center", color:"darkCyan"}}><a style={{textDecoration:"none"}} className="aa" href={place.restaurant.url} rel="noopener noreferrer" target="_blank">{place.restaurant.name}</a></h1>
                 <hr />
-                <p style={{ marginLeft: 10 }}>Location: {place.restaurant.location.address}</p>
+                <h4 style={{ marginLeft: 10 }}>Location: {place.restaurant.location.address}</h4>
                 <hr />
-                <p style={{ marginLeft: 10 }}>Pricing:{price.repeat(place.restaurant.price_range)}</p>
+                <h4 style={{ marginLeft: 10 }}>Pricing:{price.repeat(place.restaurant.price_range)}</h4>
                 <hr />
-                <p style={{ marginLeft: 10 }}>Rating: {place.restaurant.user_rating.aggregate_rating} / 5</p>
+                <h4 style={{ marginLeft: 10 }}>Rating: {place.restaurant.user_rating.aggregate_rating} / 5</h4>
                 <hr />
-                <p style={{ marginLeft: 10 }}>Cuisine Types: {place.restaurant.cuisines}</p>
+                <h4 style={{ marginLeft: 10 }}>Cuisine Type(s): {place.restaurant.cuisines}</h4>
                 <hr />
-                <p style={{ marginLeft: 10, marginBottom:11}}>Website: <a href={place.restaurant.url} target="_blank">{place.restaurant.name}</a></p>
+                <h4 style={{ marginLeft: 10, marginBottom: 11 }}>Website: <a className="aa" href={place.restaurant.url} rel="noopener noreferrer" target="_blank">{place.restaurant.name}</a></h4>
             </div>)
         const styles = {
             select: {
@@ -46,7 +46,9 @@ class Home extends React.Component {
                 zoom: 3.5,
                 marginTop: "1.2em",
                 outline: "none",
-                width: "40%"
+                width: "40%",
+                fontSize: "6px",
+                color: "white"
             },
             button: {
                 display: "block",
@@ -54,24 +56,26 @@ class Home extends React.Component {
                 outline: "none",
                 zoom: 3.5,
                 borderRadius: 5,
-                marginTop: 10
+                marginTop: 10,
+                borderColor: "cyan ",
             },
             h1: {
                 textAlign: "center",
                 margin: 0,
                 fontFamily: "cursive",
                 fontSize: "2.2em",
-                color: "lime"
+                padding:"1%",
+                color:"cyan"
             },
             div: {
-                gridGap: 5,
-                margin: 5,
+                gridGap: 15,
+                margin: 15,
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill,minmax(390px, 1fr))"
             }
         }
         const mappedCuisines = this.props.cuisines.map(food => <option value={food.cuisine.cuisine_id} key={food.cuisine.cuisine_id}>{food.cuisine.cuisine_name}</option>)
-        
+        console.log(this.props.restaurants)
         return (
             <>
                 <br />
@@ -83,7 +87,7 @@ class Home extends React.Component {
                     {mappedCuisines}
                 </select>
                 <br />
-                <button onClick={this.handleSubmit} style={styles.button}>Search</button>
+                <button onClick={this.handleSubmit} className="homeButton" style={styles.button}>Search</button>
                 <br />
                 <br />
                 <br />

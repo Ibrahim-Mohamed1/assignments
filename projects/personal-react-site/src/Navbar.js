@@ -5,25 +5,25 @@ const Navbar = () => {
     const styles = {
         div: {
             textAlign: "center",
-            border: "solid",
-            margin: 1,
             padding: "1%",
-            fontSize: "2em",
+            fontSize: "1.5em",
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
         },
         link: {
             textDecoration: "none",
-            color: "white",
-            cursor: "pointer"
+            cursor: "pointer",
+            border:"solid darkCyan",
+            padding:"1%",
+            borderRadius: 50
         },
     }
     return (
         <div style={styles.div}>
-            <Link style={styles.link} to="/">Home</Link>
-            <Link style={styles.link} to="/suggest">Suggest</Link>
-            <Link style={styles.link} to="/contact">Contact</Link>
+            <Link className="nav" style={styles.link} to="/">Home</Link>
+            <Link className="nav" style={styles.link} to="/suggest">Suggest</Link>
+            <Link className="nav" style={styles.link} to="/contact">Contact</Link>
         </div>
     )
 }
