@@ -30,8 +30,8 @@ class Contact extends React.Component {
                     <>
                         <form onSubmit={this.toggle}>
                         <br />
-                        <span style={{ fontSize: "1.5em", border: "solid lime", marginRight: 50, marginTop: 20, marginLeft: 50, display: "block", borderRadius:10 }}>
-                            <p className="res" style={{ paddingLeft: 10, paddingRight: 10, marginTop:0,paddingTop:30, marginBottom:0, paddingBottom:30,textAlign: "center", borderRadius: 7 }}>Need to contact us? Please reach out to one of our professional team members to address your concern. We will have a resolution to your concern as soon as possible.</p>
+                        <span style={{ fontSize: "1.5em", border: "solid white", marginRight: 50, marginTop: 20, marginLeft: 50, display: "block", borderRadius:10 }}>
+                            <p className="" style={{ paddingLeft: 10, paddingRight: 10, marginTop:0,paddingTop:30, marginBottom:0, paddingBottom:30,textAlign: "center", color:"white" }}>Need to contact us? Please reach out to one of our professional team members to address your concern. We will have a resolution to your concern as soon as possible.</p>
                         </span>
                         <br />
                         <br />
@@ -47,7 +47,7 @@ class Contact extends React.Component {
                         <textarea style={{ display: "block", margin: "auto", fontSize: "1.5em", width: "84%", height: "100%" }} name="" id="" rows="5" placeholder="What is the nature of your concern?" required></textarea>
                         <br />
                         <br />
-                        <button className="homeButton" style={{ display: "block", margin: "auto", zoom: 3.5, borderRadius: 5, border:"solid white" }}>Submit</button>
+                        <button className="homeButton" style={{ display: "block", margin: "auto", zoom: 3.5, borderRadius: 5, border:"solid darkCyan" }}>Submit</button>
                         </form>
                     </>
                 :
@@ -55,8 +55,8 @@ class Contact extends React.Component {
                         <br/>
                         <br/>
                         <br/>
-                        <span style={{ fontSize: "1.5em", border: "solid lime", marginRight: 50, marginTop: 20, marginLeft: 50, display: "block", borderRadius:10}}>
-                            <p className="res" style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 30, paddingBottom: 30, textAlign: "center", marginTop:0, marginBottom:0, borderRadius:7 }}>Thank you so much for your feedback! We greatly appreciate you for reaching out to us! Please allow 24 hours to hear back from one of our team members. Thank you!</p>
+                        <span style={{ fontSize: "1.5em", border: "solid darkCyan", marginRight: 50, marginTop: 20, marginLeft: 50, display: "block", borderRadius:10}}>
+                            <p style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 30, paddingBottom: 30, textAlign: "center", marginTop:0, marginBottom:0, borderRadius:7, color:"white" }}>Thank you so much for your feedback! We greatly appreciate you for reaching out to us! Please allow 24 hours to hear back from one of our team members. Thank you!</p>
                         </span>
                         <br/>
                         <br/>

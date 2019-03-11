@@ -51,15 +51,15 @@ class Suggest extends React.Component {
                 <h1 style={{ fontSize: "2.3em", textAlign: "center", fontFamily: "cursive", color: "cyan" }}>Find a new favorite cuisine!</h1>
                 <br />
                 <br />
-                <button onClick={this.reload} className="homeButton" style={{ display: "block", margin: "auto", zoom: 3, borderRadius: 5, borderColor: "white"}}>I'm Feeling Lucky</button>
+                <button onClick={this.reload} className="homeButton" style={{ display: "block", margin: "auto", zoom: 3, borderRadius: 5, borderColor: "cyan"}}>I'm Feeling Lucky</button>
                 <br />
                 <br />
                 <br />
                 <div style={styles.div}>
-                    <div className="res" style={{ border: "solid cyan", borderRadius: 30}}>
+                    <div className="res" style={{ border: "solid red", borderRadius: 30}}>
                         <h1 style={{ marginLeft: 10, textAlign: "center", color:"darkCyan"}}><a style={{textDecoration:"none"}} className="aa" href={this.props.luckyRestaurant.url} rel="noopener noreferrer" target="_blank">{this.props.luckyRestaurant.name}</a></h1>
                         <hr />
-                        <h4 style={{ marginLeft: 10 }}>Location: {this.props.luckyRestaurant.location ? this.props.luckyRestaurant.location.address : null}</h4>
+                        <h4 style={{ marginLeft: 10 }}>Location: <a className="aa" target="_blank" href={`https://www.google.com/maps/search/${this.props.luckyRestaurant.name}`} >{this.props.luckyRestaurant.location ? this.props.luckyRestaurant.location.address : null}</a></h4>
                         <hr />
                         <h4 style={{ marginLeft: 10 }}>Pricing:{price.repeat(this.props.luckyRestaurant.price_range)}</h4>
                         <hr />
