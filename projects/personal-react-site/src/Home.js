@@ -29,7 +29,7 @@ class Home extends React.Component {
             <div class="res" style={{ border: "solid red", borderRadius:30 }} key={place.restaurant.id}>
                 <h1 style={{ marginLeft: 10, textAlign: "center", color:"darkCyan"}}><a style={{textDecoration:"none"}} className="aa" href={place.restaurant.url} rel="noopener noreferrer" target="_blank">{place.restaurant.name}</a></h1>
                 <hr />
-                <h4 style={{ marginLeft: 10 }}>Location: <a className="aa" target="_blank" href={`https://www.google.com/maps/search/${place.restaurant.name}`} >{place.restaurant.location ? place.restaurant.location.address : null}</a></h4>                <hr />
+                <h4 style={{ marginLeft: 10 }}>Location: <a className="aa" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/${place.restaurant.name}`} >{place.restaurant.location ? place.restaurant.location.address : null}</a></h4>                <hr />
                 <h4 style={{ marginLeft: 10 }}>Pricing:{price.repeat(place.restaurant.price_range)}</h4>
                 <hr />
                 <h4 style={{ marginLeft: 10 }}>Rating: {place.restaurant.user_rating.aggregate_rating} / 5</h4>
@@ -81,10 +81,12 @@ class Home extends React.Component {
                 <br />
                 <br />
                 <h1 style={styles.h1}>Try New and Exciting Food!</h1>
-                <select style={styles.select} action="" onChange={this.handleChange}>
-                    <option value="">Please Select...</option>
-                    {mappedCuisines}
-                </select>
+                <div>
+                    <select style={styles.select} action="" onChange={this.handleChange}>
+                        <option value="">Please Select...</option>
+                        {mappedCuisines}
+                    </select>
+                </div>
                 <br />
                 <button onClick={this.handleSubmit} className="homeButton" style={styles.button}>Search</button>
                 <br />
