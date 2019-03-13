@@ -2,12 +2,9 @@
 
 const carrots = ["bright orange", "ripe", "rotten"]
 
-function mapVegetables(arr) {
-    return arr.map(function(carrot) {
-        return { type: "carrot", name: carrot }
-    })
-}
-console.log(mapVegetables("carrot"))
+const mapVegetables = carrots.map(carrot => ({ type: "carrot", name: carrot}))
+
+console.log(mapVegetables)
 
 // REWRITE TO ES6
 
@@ -62,9 +59,9 @@ console.log(mapVegetables("carrot"))
 
 // REWRITE TO ES6
 
-var printString = (fName, lName, age) => `Hello ${fName} ${lName}! How does it feel to be ${age}!`
+// var printString = (fName, lName, age) => `Hello ${fName} ${lName}! How does it feel to be ${age}!`
 
-console.log(printString("Ibrahim", "Mohamed", 22))
+// console.log(printString("Ibrahim", "Mohamed", 22))
 
 
 // REWRITE TO ES6

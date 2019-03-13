@@ -1,5 +1,7 @@
-function collectAnimals(...collectAnimals) {  
-    console.log(collectAnimals)
+const collectAnimals = ["dog", "cat", "mouse", "jackolope", "platypus", "Lion", "Cheetah"]; 
+
+const animals = (...collectAnimals) => {
+    return collectAnimals
 }
 
-collectAnimals("dog", "cat", "mouse", "jackolope", "platypus", "Lion", "Cheetah"); 
+console.log(animals(...collectAnimals))    
