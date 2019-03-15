@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
-import DaddyProvider from "./DaddyProvider"
+import Provider from "./Provider"
 import App from './App';
 
 ReactDOM.render(
-    <DaddyProvider>
+    <Provider>
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </DaddyProvider>
+    </Provider>
     , document.getElementById('root'));

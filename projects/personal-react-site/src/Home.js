@@ -1,5 +1,5 @@
 import React from "react"
-import { withData } from "./DaddyProvider"
+import { withData } from "./Provider"
 
 class Home extends React.Component {
     constructor() {

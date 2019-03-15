@@ -1,8 +1,14 @@
 const express = require('express')
 const app = express()
 const port = 9233
+const mongoose = require('mongoose')
+const Todoo = ("./todo")
 
 app.use(express.json())
+
+mongoose.connect('mongodb://localhost:27017/server', {useNewUrlParser: true}).then(()=>{
+    console.log("connected to MongoDB")
+})
 
 const todos = [
     {
@@ -18,8 +24,8 @@ const todos = [
         _id: "384975"
     },
     {
-        title: "Eat",
-        description: "Tacos",
+        title: "Eat More Tacos",
+        description: "Taco Taco",
         imageUrl: "https://pinchofyum.com/wp-content/uploads/Chili-Lime-Fish-Tacos-Recipe.jpg",
         _id: "384975"
     }
@@ -41,8 +47,13 @@ app.get('/todo/:_id', (req, res) => {
 })
 
 app.post("/todo", (req, res) => {
-    todos.push(req.body)
-    res.send(todos)
+    if (Object.keys(req.body).length !== 0){
+        const newObj = new Todoo (req.body)
+            if (err) return res.status(500).send(err)
+            return res.status(200).send(newObj)
+    }else(
+        res.send(todos)
+    )
 })
 
 app.put("/todo/:_id", (req, res) => {

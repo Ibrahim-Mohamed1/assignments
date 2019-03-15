@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from "axios"
 const { Provider, Consumer } = React.createContext()
 
-class DaddyProvider extends Component {
+class Provider extends Component {
     constructor() {
         super()
         this.state = {
@@ -51,7 +51,7 @@ class DaddyProvider extends Component {
         )
     }
 }
-export default DaddyProvider
+export default Provider
 
 export function withData(C) {
     return props => <Consumer>

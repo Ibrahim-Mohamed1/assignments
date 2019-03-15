@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = 3894
+const port = 6969
 const bounty = require("./bountyList")
 const uuid = require("uuid")
 

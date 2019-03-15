@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
+import axios from "axios"
 
 class Form extends Component {
+    constructor(){
+        super()
+        this.state={
+            inputs: {firstName:"",
+            lastName:"",
+            status:"",
+            type:"",
+            reward:""},
+            bounties:[]
+        }
+    }
 
-    handleChange = () =>{
+    // componentDidMount() {
+    //     axios.post('/bounty').then(res => {
+    //         this.setState({
+    //             list: res.data
+    //         })
+    //     })
+    // }
+
+    handleChange = (e) =>{
         console.log("I am a handleChange")
     }
 
-    handleSubmit = () =>{
+    handleSubmit = (e) =>{
+        e.preventDefault()
         console.log("I am a handleSubmit")
+        this.props.postbounties()
     }
 
     render() {
         return (
-            <form style={{zoom: 1.8, display:"block", textAlign:"center", marginBottom:8}}>
+            <form onClick={this.handleSubmit} style={{zoom: 1.8, display:"block", textAlign:"center", marginBottom:8}}>
                 <input style={{margin:"1%"}} type="text" placeholder="First Name" onChange={this.handleChange}/>
                 <input style={{margin:"1%"}} type="text" placeholder="Last Name" onChange={this.handleChange}/>
                 <br/>

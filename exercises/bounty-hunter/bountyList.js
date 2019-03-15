@@ -42,7 +42,7 @@ module.exports = [
         _id: uuid.v4()
     },
     {
-        firstName: "Yodo",
+        firstName: "Yoda",
         lastName: "",
         isAlive: true,
         reward: "$50,000,000",
