@@ -9,7 +9,7 @@ class DataProvider extends Component {
             inputs:{
                 firstName: "",
                 lastName: "",
-                status: "",
+                isAlive: Boolean,
                 type: "",
                 reward: ""
             },
@@ -32,10 +32,26 @@ class DataProvider extends Component {
                 inputs:{
                     firstName: "",
                     lastName: "",
-                    status: "",
+                    isAlive: Boolean,
                     type: "",
                     reward: ""
                 }
+            }))
+        })
+    }
+
+    deleteBounty = (_id) => {
+        axios.delete(`/bounty/${_id}`).then(res => {
+            this.setState(prevState => ({
+                bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
+            }))
+        })
+    }
+
+    editBounty = (id, updatedBounty) => {
+        axios.put(`bounty/${id}`, updatedBounty).then(res => {
+            this.setState(prevState => ({
+                bounties: prevState.bounties.map(bounty => bounty._id === id ? bounty = updatedBounty : bounty)
             }))
         })
     }
@@ -45,6 +61,8 @@ class DataProvider extends Component {
             <Provider value={{
                 getBounties: this.getBounties,
                 postBounties: this.postBounties,
+                deleteBounty: this.deleteBounty,
+                editBounty: this.editBounty,
                 ...this.state
             }}
             >
