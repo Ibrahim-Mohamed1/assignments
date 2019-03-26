@@ -26,7 +26,7 @@ class Home extends React.Component {
     render() {
         const price = " $"
         const mappedRestaurants = this.props.restaurants.map(place =>
-            <div class="res" style={{ border: "solid red", borderRadius:30 }} key={place.restaurant.id}>
+            <div className="res" style={{ border: "solid red", borderRadius:30 }} key={place.restaurant.id}>
                 <h1 style={{ marginLeft: 10, textAlign: "center", color:"darkCyan"}}><a style={{textDecoration:"none"}} className="aa" href={place.restaurant.url} rel="noopener noreferrer" target="_blank">{place.restaurant.name}</a></h1>
                 <hr />
                 <h4 style={{ marginLeft: 10 }}>Location: <a className="aa" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/${place.restaurant.name}`} >{place.restaurant.location ? place.restaurant.location.address : null}</a></h4>                <hr />

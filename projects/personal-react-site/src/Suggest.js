@@ -5,7 +5,7 @@ class Suggest extends React.Component {
     constructor() {
         super()
         this.state = {
-            lucky: false
+            // lucky: false
         }
     }
 
@@ -20,14 +20,14 @@ class Suggest extends React.Component {
         this.props.luckyRestaurants(key[0])
     }
 
-    lucky = () => {
-        this.setState(prevState => ({
-            lucky: !prevState.lucky
-        }))
-    }
+    // lucky = () => {
+    //     this.setState(prevState => ({
+    //         lucky: !prevState.lucky
+    //     }))
+    // }
 
     reload() {
-        window.location.reload()
+        this.props.luckyRestaurants(this.key[0])
     }
 
     render() {

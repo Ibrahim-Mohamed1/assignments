@@ -5,7 +5,7 @@ import Form from "./Form"
 const App = () => {
     return (
         <div>
-            <Form/>
+            <Form type="edit"/>
             <Bounty/>
         </div>
     );

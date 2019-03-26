@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withData } from "./DataProvider"
-// import Form from "./Form"
 
 class Bounty extends Component {
     constructor(props) {
@@ -25,11 +24,14 @@ class Bounty extends Component {
         }))
     }
 
+
+
     handleSubmit = (e, id) => {
         e.preventDefault()
-        let {firstName, lastName, isAlive, reward, type} = this.state;
-        const updatedBounty = {firstName, lastName, isAlive, reward, type}
-        this.props.editBounty(id, updatedBounty)
+        // let {firstName, lastName, isAlive, reward, type} = this.state;
+        // const updatedBounty = {firstName, lastName, isAlive, reward, type}
+        // this.props.editBounty(id, updatedBounty)
+        this.props.type === "add" ? this.props.postBounties(this.state) : this.props.editBounty(id, this.state)
     }
 
     render() {
@@ -47,19 +49,23 @@ class Bounty extends Component {
             <h1 style={{ marginLeft: 10 }}>Reward: ${bounty.reward}</h1>
             <button style={{ zoom: 2.1, borderRadius: 5, margin: "1%", float: "left" }} onClick={this.toggle}>Edit</button>
             <button style={{ zoom: 2.1, borderRadius: 5, margin: "1%", float: "right" }} onClick={() => { deleteBounty(bounty._id) }}>Delete</button>
+            :
+            
         </div>))
         console.log(this.props)
+        
         return (
-            <div style={{ display: "grid", gridGap: 15, gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr)" }}>
+            <div style={{ display: "grid", gridGap: 15, gridTemplateColumns: "repeat(auto-fill, minmax(380px, 1fr)" }}>
                 {this.state.edit ?
                     <>
                         {mappedBounties}
                     </>
                     :
                     <>
-                        <form onSubmit={(e) => this.handleSubmit} style={{zoom:2.5, border:"white solid", width:150, display:"block", margin:"auto", textAlign:"center"}}>
+                        <form onSubmit={(e) => this.handleSubmit} className={this.props.type === 'add' ? "post" : "edit"} style={{zoom:2.5, border:"white solid", width:150, display:"block", margin:"auto", textAlign:"center"}}>
                             <input style={{margin:"1%"}} 
                                 type="text" 
+                                autoComplete="off"
                                 value={this.state.firstName} 
                                 name="firstName" 
                                 placeholder="First Name" 
@@ -67,6 +73,7 @@ class Bounty extends Component {
                                 required/>
                             <input style={{margin:"1%"}} 
                                 type="text" 
+                                autoComplete="off"
                                 value={this.state.lastName} 
                                 name="lastName" 
                                 placeholder="Last Name" 
@@ -76,22 +83,27 @@ class Bounty extends Component {
                             <input style={{margin:"1%"}} 
                                 type="radio" 
                                 name="isAlive" 
+                                autoComplete="off"
                                 value={true} 
                                 onChange={this.handleChange}/>Alive 
                             <input style={{margin:"1%", marginLeft:"10%"}} 
                                 type="radio" 
                                 name="isAlive" 
+                                autoComplete="off"
                                 value={false}
                                 onChange={this.handleChange}/>Dead 
                             <br/>
                             <input style={{margin:"1%"}} 
                                 type="text" 
+                                autoComplete="off"
                                 value={this.state.reward} 
                                 name="reward" 
                                 placeholder="Type" 
-                                onChange={this.handleChange}/>
+                                onChange={this.handleChange}
+                                required/>
                             <input style={{margin:"1%"}} 
                                 type="text" 
+                                autoComplete="off"
                                 value={this.state.type} 
                                 name="type" 
                                 placeholder="Reward" 

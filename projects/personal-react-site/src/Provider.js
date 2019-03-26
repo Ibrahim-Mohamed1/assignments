@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from "axios"
 const { Provider, Consumer } = React.createContext()
 
-class Provider extends Component {
+class DataProvider extends Component {
     constructor() {
         super()
         this.state = {
@@ -13,7 +13,7 @@ class Provider extends Component {
     }
 
     getCuisines = () => {
-        axios.get('https://developers.zomato.com/api/v2.1/cuisines?city_id=1213', { headers: { "user-key": 'b9231aba813528cc150e005038ae0983' } }).then(res => {
+        axios.get('https://developers.zomato.com/api/v2.1/cuisines?city_id=1213', { headers: { "user-key": `${process.env.REACT_APP_KEY}` } }).then(res => {
             this.setState({
                 cuisines: res.data.cuisines
             })
@@ -21,7 +21,7 @@ class Provider extends Component {
     }
     
     getRestaurants = (cuisineKey) => {
-        axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${cuisineKey}`, { headers: { "user-key": 'b9231aba813528cc150e005038ae0983' } }).then(res => {
+        axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${cuisineKey}`, { headers: { "user-key": `${process.env.REACT_APP_KEY}` } }).then(res => {
             this.setState({
                 restaurants: res.data.restaurants
             })
@@ -29,7 +29,8 @@ class Provider extends Component {
     }
 
     luckyRestaurants = (key) => {
-        axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${key}`, { headers: { "user-key": 'b9231aba813528cc150e005038ae0983' } }).then(res => {
+        axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=1213&entity_type=city&cuisines=${key}`, { headers: { "user-key": `${process.env.REACT_APP_KEY}` } }).then(res => {
+            console.log('fired', res.data)
             console.log('here i am')
             this.setState({
                 luckyRestaurant: res.data.restaurants[Math.floor(Math.random()*res.data.restaurants.length)].restaurant
@@ -51,7 +52,7 @@ class Provider extends Component {
         )
     }
 }
-export default Provider
+export default DataProvider
 
 export function withData(C) {
     return props => <Consumer>

@@ -6,13 +6,6 @@ class DataProvider extends Component {
     constructor() {
         super()
         this.state = {
-            inputs:{
-                firstName: "",
-                lastName: "",
-                isAlive: Boolean,
-                type: "",
-                reward: ""
-            },
             bounties:[]
         }
     }
@@ -25,17 +18,11 @@ class DataProvider extends Component {
         })
     }
 
-    postBounties = () => {
-        axios.post('/bounty', this.state.inputs).then(res=>{
+    postBounties = (newBounty) => {
+        axios.post('/bounty', newBounty).then(res=>{
+            console.log(this.state.inputs)
             this.setState(prevState=>({
-                bounties: [...prevState.bounties,res.data],
-                inputs:{
-                    firstName: "",
-                    lastName: "",
-                    isAlive: Boolean,
-                    type: "",
-                    reward: ""
-                }
+                bounties: [...prevState.bounties,res.data]
             }))
         })
     }
